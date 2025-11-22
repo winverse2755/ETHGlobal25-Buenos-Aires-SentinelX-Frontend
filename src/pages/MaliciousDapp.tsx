@@ -46,12 +46,11 @@ const RARI_NETWORK = defineChain({
 });
 
 // Attacker's private key
-const ATTACKER_PRIVATE_KEY = process.env.ATTACKER_PRIVATE_KEY;
+const ATTACKER_PRIVATE_KEY = import.meta.env.VITE_ATTACKER_PRIVATE_KEY;
 
 if (!ATTACKER_PRIVATE_KEY) {
   console.error("ATTACKER_PRIVATE_KEY is not set");
 }
-  
 
 const CELO_CHAIN_ID = celoSepolia.id;
 const APPCHAIN_CHAIN_ID = 4661;
@@ -647,7 +646,8 @@ const MaliciousDapp = () => {
               <div className="mt-4 p-4 bg-red-500/10 border border-red-500/50 rounded-xl animate-in">
                 <p className="text-sm text-red-400 font-semibold flex items-center gap-2">
                   <span className="text-lg">⚠️</span>
-                  Approved: {(formatUnits(allowance.data, 18)).slice(0, 20)}... USDC
+                  Approved: {formatUnits(allowance.data, 18).slice(0, 20)}...
+                  USDC
                 </p>
               </div>
             )}

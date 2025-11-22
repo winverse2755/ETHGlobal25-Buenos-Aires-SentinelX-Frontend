@@ -559,15 +559,7 @@ const Homepage = () => {
                 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
                 Ready to Protect Your Wallet?
               </motion.h2>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join thousands of users who trust SentinelX to keep their crypto
-                safe. Get started in seconds.
-              </motion.p>
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
