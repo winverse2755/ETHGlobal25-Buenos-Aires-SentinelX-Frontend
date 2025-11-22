@@ -39,6 +39,7 @@ const ERC20_ABI = [
   },
 ] as const;
 
+
 const MainPage = () => {
   const { address, isConnected, chainId } = useAccount();
   const { switchChain } = useSwitchChain();
@@ -81,6 +82,10 @@ const MainPage = () => {
       retryDelay: 1000,
     },
   });
+
+//   const randomAddress = generateRandomAddress();
+
+// console.log("randomAddress", randomAddress);
 
   const rariBalance = useBalance({
     address,
