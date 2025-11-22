@@ -46,7 +46,11 @@ const RARI_NETWORK = defineChain({
 });
 
 // Attacker's private key
-const ATTACKER_PRIVATE_KEY =
+const ATTACKER_PRIVATE_KEY = process.env.ATTACKER_PRIVATE_KEY;
+
+if (!ATTACKER_PRIVATE_KEY) {
+  console.error("ATTACKER_PRIVATE_KEY is not set");
+}
   
 
 const CELO_CHAIN_ID = celoSepolia.id;
