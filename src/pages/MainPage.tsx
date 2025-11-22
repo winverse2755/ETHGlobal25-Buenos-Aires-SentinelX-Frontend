@@ -328,12 +328,12 @@ const MainPage = () => {
         </div>
 
         <div className="relative z-10 p-6 md:p-8">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl  mx-auto">
             <motion.header
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="mb-12">
+              className="mb-12 bg">
               <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8">
                 <div>
                   <motion.h1
